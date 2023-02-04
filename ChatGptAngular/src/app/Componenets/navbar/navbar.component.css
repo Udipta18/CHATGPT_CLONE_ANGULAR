@@ -1,0 +1,13 @@
+.das{
+    color: blueviolet;
+}
+
+.search-hero {
+    max-width: 500px;
+    padding-bottom: 50px;
+    margin:auto;
+  }
+
+  p {
+    font-size: 14px;
+  }

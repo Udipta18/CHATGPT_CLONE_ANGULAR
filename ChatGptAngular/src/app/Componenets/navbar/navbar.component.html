@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://getbootstrap.com/docs/5.3/assets/css/docs.css"
+      rel="stylesheet"
+    />
+    <title>Bootstrap Example</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  </head>
+  <body class="p-3 m-0 border-0 bd-example">
+    <!-- Example Code -->
+
+    <nav class="navbar fixed-top  bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">
+          <img
+            src="https://openai.com/content/images/2022/05/openai-avatar.png"
+            alt="Logo"
+            width="30"
+            height="24"
+            class="d-inline-block align-text-top das "
+          />
+          ChatGpt
+        </a>
+      </div>
+    </nav>
+   
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1>Enter WhatEver U want To ask</h1>
+                <div class="form-group">
+                   <textarea [(ngModel)]="searchText" name="" id="" rows="5" placeholder="Enter Your Queries" class="form-control"></textarea>
+                </div>
+                <!-- <p class="p-4 text-danger">*we will use your profile contact number as contactnumber.In case of any query drop a mail <b>dasdsa1208@gmail.com</b> </p> -->
+               <!-- {{order | json}} -->
+            </div>
+            <div class="container text-center" *ngIf="button">
+                <button  (click)="submit()"   class="btn btn-success btn-lg">Click To See Answer</button>
+            </div>
+            
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12" *ngIf="target">
+               
+                  
+                   <p class="p-15 text-center text-danger" ><b>ANSWER</b></p>
+                   <textarea  name="" id="" rows="20"  class="form-control"> {{response }}</textarea>
+               
+                   <div class="container text-center" *ngIf="!button">
+                    <button  (click)="reset()"   class="btn btn-outline-info btn-lg">BACK TO ASK QUESTIONS</button>
+                </div>
+              
+            </div>
+            
+            
+        </div>
+    </div>
+
+    
+    <!-- End Example Code -->
+  </body>
+</html>
+
+
